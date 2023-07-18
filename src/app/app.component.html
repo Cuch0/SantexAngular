@@ -1,0 +1,25 @@
+<div class="contenedor-tabla">
+    <div *ngIf="mostrar">
+        <table class="my-table">
+            <thead>
+                <tr>
+                    <th class="atr-nombre">Nombre</th>
+                    <th class="atr-costo">Costo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos">
+                    <td class="nombre">{{producto.nombre}}</td>
+                    <td class="costo">{{producto.costo}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="contenedor-boton">
+    <button class="boton" 
+            (click)="mostrarTabla()" mat-fab extended color="primary">
+            Mostrar/Ocultar
+    </button>
+</div>
